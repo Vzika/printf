@@ -52,9 +52,3 @@ int _printf(const char *format, ...)
 	va_end(my_list);
 }
 
-int main()
-{
-	_printf("%s %d %c", "hello",30, 't');
-	printf("%s %d %c", "hello",30, 't');
-	return(0);
-}
