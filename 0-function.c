@@ -53,3 +53,4 @@ int print_modulus(va_list list)
 	write(1, &c, 1);
 	return 1;
 }
+

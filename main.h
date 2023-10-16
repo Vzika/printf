@@ -31,3 +31,4 @@ int print_hex_lower(va_list list);
 int print_hex_upper(va_list list);
 
 #endif
+

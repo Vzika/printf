@@ -158,3 +158,4 @@ int print_hex_upper(va_list list) {
 
     return len;
 }
+
