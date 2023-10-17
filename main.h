@@ -14,6 +14,9 @@ typedef struct print
 	char *type;
 	int (*func)(va_list);
 } print_t;
+
+void print_char(char c, int *char_count);
+void print_string(const char *s, int *char_count);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int base_change(unsigned int n, unsigned int base);
