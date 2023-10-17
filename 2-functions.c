@@ -15,23 +15,22 @@ int print_binary(va_list list)
 
 	if (num == 0)
 	{
-	write(1, "0", 1);
-	return (1);
+		write(1, "0", 1);
+		return (1);
 	}
 	for (i = 0; i < sizeof(unsigned int) * 8; i++)
 	{
-	if (num & mask)
-	write(1, "1", 1);
-	flag = 1;
-	len++;
+		if (num & mask)
+			write(1, "1", 1);
+		flag = 1;
+		len++;
 	}
-	else if (flag)
+	if (flag)
 	{
-	write(1, "0", 1);
-	len++;
+		write(1, "0", 1);
+		len++;
 	}
 	mask >>= 1;
-	}
-	return (len);
+return (len);
 }
 
