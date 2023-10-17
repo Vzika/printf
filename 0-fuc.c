@@ -16,3 +16,4 @@ int print_c(va_list c)
 	_putchar(value);
 	return (1);
 }
+

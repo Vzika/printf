@@ -13,10 +13,10 @@ typedef struct print
 {
 	char *type;
 	int (*func)(va_list);
-} print;
+} print_t;
 int _putchar(char c);
 int _printf(const char *format, ...);
-int change_base(unsigned int n, int newdigit, unsigned int base);
+int base_change_2(unsigned int n, int newdigit, unsigned int base);
 int print_c(va_list c);
 int print_s(va_list s);
 int print_d(va_list d);

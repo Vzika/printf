@@ -3,14 +3,14 @@
 
 /**
  * get_spec - get the format
- * @format: string passed
+ * @format: type of specifier
  *
  * Return: NULL or valid function
  */
 
 int (*get_spec(const char *format))(va_list)
 {
-	print arr[] = {
+	print_t p[] = {
 		{"c", print_c},
 		{"s", print_s},
 		{"i", print_i},
@@ -21,12 +21,12 @@ int (*get_spec(const char *format))(va_list)
 	};
 	int i;
 
-	for (i = 0; arr[i].type != NULL; i++)
+	for (i = 0; p[i].type != NULL; i++)
 	{
-		if (*(arr[i].type) == *format)
+		if (*(p[i].type) == *format)
 			break;
 	}
-	return (arr[i].func);
+	return (p[i].func);
 }
 
 /**
