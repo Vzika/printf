@@ -38,3 +38,26 @@ int base_change(unsigned int n, unsigned int base)
 	return (newdigit);
 }
 
+/**
+ * printOctal - function to print an octal number
+ * @args: argument list
+ * Return: the number of digits printed
+ */
+int printOctal(va_list args)
+{
+	unsigned int n = va_arg(args, unsigned int);
+	int count = 0;
+
+	if (n == 0)
+	{
+		_putchar('0');
+		count++;
+	}
+	else
+	{
+		count = base_change(n, 8);
+	}
+
+	return (count);
+}
+
