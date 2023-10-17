@@ -1,7 +1,7 @@
 #include <unistd.h>
 
 /**
- *_print_char - Print a character to the standard output
+ *print_char - Print a character to the standard output
  * @c: The character to print
  * @char_count: Pointer to the character count
  */
