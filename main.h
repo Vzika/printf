@@ -15,6 +15,10 @@
 
 typedef struct format_specifiers
 {
+	/**
+	  * @type_specifier: The format specifier character
+	  * @print: A pointer to the function that handles
+	  */
 	char type_specifier;
 	int (*print)(va_list arg);
 } print;

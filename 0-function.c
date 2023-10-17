@@ -7,7 +7,6 @@
  */
 
 int print_char(va_list list)
-
 {
 	char c = va_arg(list, int);
 
@@ -23,7 +22,6 @@ int print_char(va_list list)
  */
 
 int print_str(va_list list)
-
 {
 	size_t i;
 	char *str = va_arg(list, char *);
@@ -48,7 +46,6 @@ int print_str(va_list list)
  */
 
 int print_modulus(va_list list)
-
 {
 	char c;
 
