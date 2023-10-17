@@ -10,7 +10,6 @@ int _printf(const char *format, ...)
 	size_t length = 0, i = 0, j, size_of_array;
 	print arr[10] = {
 		{'c', print_char}, {'s', print_str}, {'%', print_modulus},
-		{'d', print_int}, {'i', print_int}, {'b', print_binary},
 	};
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (0);

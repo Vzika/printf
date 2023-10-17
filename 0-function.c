@@ -7,10 +7,12 @@
  */
 
 int print_char(va_list list)
+
 {
 	char c = va_arg(list, int);
+
 	write(1, &c, 1);
-	return 1;
+	return (1);
 }
 
 /**
@@ -21,6 +23,7 @@ int print_char(va_list list)
  */
 
 int print_str(va_list list)
+
 {
 	size_t i;
 	char *str = va_arg(list, char *);
@@ -34,7 +37,7 @@ int print_str(va_list list)
 		write(1, &str[i], 1);
 		i++;
 	}
-	return i;
+	return (1);
 }
 
 /**
@@ -45,12 +48,13 @@ int print_str(va_list list)
  */
 
 int print_modulus(va_list list)
+
 {
 	char c;
 
 	(void)list;
 	c = '%';
 	write(1, &c, 1);
-	return 1;
+	return (1);
 }
 

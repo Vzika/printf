@@ -9,15 +9,19 @@
 
 /**
  * struct format_specifiers - A struct to hold format
- * @specifier_type: The format specifier character
+ * @type_specifier: The format specifier character
  * @print: A pointer to the function that handles
  */
 
 typedef struct format_specifiers
 {
+	/**
+	 * @type_specifier: The format specifier character
+	 * @print: A pointer to the function that handles
+	 */
 	char type_specifier;
 	int (*print)(va_list arg);
-}print;
+} print;
 
 int _printf(const char *format, ...);
 int print_char(va_list arg);
