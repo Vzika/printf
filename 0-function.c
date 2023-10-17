@@ -22,7 +22,7 @@ int change_base(unsigned int n, int newdigit, unsigned int base)
 	}
 	else
 	{
-		a = base_change_2(n / base, newdigit + 1, base);
+		a = change_base(n / base, newdigit + 1, base);
 		_putchar(n % base + '0');
 		return (a);
 	}
@@ -50,7 +50,7 @@ int print_b(va_list b)
 	}
 	else if (n > 0)
 	{
-		binary = base_change_2(n, count, 2);
+		binary = change_base(n, count, 2);
 	}
 	return (binary);
 }

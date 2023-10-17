@@ -13,7 +13,7 @@ typedef struct print
 {
 	char *type;
 	int (*func)(va_list);
-} struct;
+} print;
 int _putchar(char c);
 int _printf(const char *format, ...);
 int change_base(unsigned int n, int newdigit, unsigned int base);

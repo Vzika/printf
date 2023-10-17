@@ -10,6 +10,7 @@
 
 int print_h(va_list h)
 {
+	(void) h;
 	int decnum, temp, a;
 	char Hex[32];
 

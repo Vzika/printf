@@ -10,7 +10,7 @@
 
 int (*get_spec(const char *format))(va_list)
 {
-	struct  arr[] = {
+	print arr[] = {
 		{"c", print_c},
 		{"s", print_s},
 		{"i", print_i},
