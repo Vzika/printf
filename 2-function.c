@@ -2,18 +2,19 @@
 #include <stdarg.h>
 
 /**
- *print_i - function to print a int number
- *@i: paramaters
- *Return: the number of characters printed
- *On error, -1 is returned, and errno is set appropriately.
+ * print_d - function to print a int number
+ * @d: paramaters
+ *
+ * Return: the number of characters printed
+ * On error, -1 is returned, and errno is set appropriately.
  */
 
-int print_i(va_list i)
+int print_d(va_list d)
 {
 	int count, n2, num2;
-	int n, num3, div;
+	int n, div, num3;
 
-	n = va_arg(i, int);
+	n = va_arg(d, int);
 	n2 = n;
 	count = 0;
 	while (n2 != 0)

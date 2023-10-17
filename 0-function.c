@@ -1,57 +1,57 @@
 #include "main.h"
-/**
- * print_char - Print a character
- * @list: A va_list containing the character to print
- *
- * Return: The number of characters printed (always 1)
- */
-
-int print_char(va_list list)
-{
-	char c = va_arg(list, int);
-
-	write(1, &c, 1);
-	return (1);
-}
+#include <stdarg.h>
 
 /**
- * print_str - Print a string
- * @list: A va_list containing the string to print
+ *change_base - function to change a int number in other base
+ *@n: the number
+ *@newdigit: the number of digits that will be has the new number
+ *@base: the new base
  *
- * Return: The number of characters printed
+ *Return: the number of characters printed
+ *On error, -1 is returned, and errno is set appropriately.
  */
 
-int print_str(va_list list)
+int change_base(unsigned int n, int newdigit, unsigned int base)
 {
-	size_t i;
-	char *str = va_arg(list, char *);
+	int a;
 
-	if (str == NULL)
-		str = "(null)";
-
-	i = 0;
-	while (str[i])
+	if (n / base == 0)
 	{
-		write(1, &str[i], 1);
-		i++;
+		_putchar(n % base + '0');
+		return (newdigit + 1);
 	}
-	return (1);
+	else
+	{
+		a = base_change_2(n / base, newdigit + 1, base);
+		_putchar(n % base + '0');
+		return (a);
+	}
 }
 
+
 /**
- * print_modulus - Print the percentage character
- * @list: A va_list (unused)
- *
- * Return: The number of characters printed (always 1)
+ *print_b - function to print a binary number
+ *@b: paramaters
+ *Return: the number of digits printed
+ *On error, -1 is returned, and errno is set appropriately.
  */
 
-int print_modulus(va_list list)
+int print_b(va_list b)
 {
-	char c;
+	int count, binary;
+	unsigned int n;
 
-	(void)list;
-	c = '%';
-	write(1, &c, 1);
-	return (1);
+	n = va_arg(b, unsigned int);
+	count = 0;
+	if (n == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+	else if (n > 0)
+	{
+		binary = base_change_2(n, count, 2);
+	}
+	return (binary);
 }
 
