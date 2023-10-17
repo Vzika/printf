@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * print_unsigned - the function that holds num to print
+ * @list: list of the number to be printed
+ *
+ * Return: lenght of the num printed
+ */
 
 int print_unsigned(va_list list)
 {

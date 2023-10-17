@@ -1,32 +1,42 @@
 #include "main.h"
+/**
+ * print_octal - function that holds num to be printed
+ * @list: list of number to be printed
+ *
+ * Return: lenght of numbers printed
+ */
 
-int print_octal(va_list list) {
-    unsigned int num = va_arg(list, unsigned int);
-    int len = 0;
-    unsigned int temp = num;
-    char *octal;
+int print_octal(va_list list)
+{
+	unsigned int num = va_arg(list, unsigned int);
+	int len = 0;
+	unsigned int temp = num;
+	char *octal;
 	int i;
 
-    if (num == 0) {
-        write(1, "0", 1);
-        return 1;
-    }
+	if (num == 0)
+	{
+		write(1, "0", 1);
+		return (1);
+	}
 
-    while (temp != 0) {
-        temp /= 8;
-        len++;
-    }
+	while (temp != 0)
+	{
+		temp /= 8;
+		len++;
+	}
 
-    octal = (char *)malloc(len * sizeof(char));
+	octal = (char *)malloc(len * sizeof(char));
 
-    for (i = len - 1; i >= 0; i--) {
-        octal[i] = num % 8 + '0';
-        num /= 8;
-    }
+	for (i = len - 1; i >= 0; i--)
+	{
+		octal[i] = num % 8 + '0';
+		num /= 8;
+	}
 
-    write(1, octal, len);
-    free(octal);
+	write(1, octal, len);
+	free(octal);
 
-    return len;
+	return (len);
 }
 
