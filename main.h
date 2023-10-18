@@ -4,6 +4,8 @@
 #define BUFFER_SIZE 1024
 
 #include <stdarg.h>
+#include <limits.h>
+#include <stdio.h>
 /**
  * struct print - structure for printing various types
  * @t: type of element
