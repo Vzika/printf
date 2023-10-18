@@ -1,33 +1,38 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#define BUFFER_SIZE 1024
-
-#include <stdarg.h>
-#include <limits.h>
 #include <stdio.h>
-/**
- * struct print - structure for printing various types
- * @t: type of element
- * @f: function to print
- */
-typedef struct print
-{
-	char *type;
-	int (*func)(va_list);
-} print_t;
+#include <unistd.h>
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
 
-void print_char(char c, int *char_count);
-void print_string(const char *s, int *char_count);
-int _putchar(char c);
+/**
+ * struct format_specifiers - A struct to hold format
+ * @type_specifier: The format specifier character
+ * @print: A pointer to the function that handles
+ */
+
+typedef struct format_specifiers
+{
+	/**
+	  * @type_specifier: The format specifier character
+	  * @print: A pointer to the function that handles
+	  */
+	char type_specifier;
+	int (*print)(va_list arg);
+} print;
+
 int _printf(const char *format, ...);
-int base_change(unsigned int n, unsigned int base);
-int print_binary(va_list b);
-int printOctal(va_list args);
-int print_c(va_list c);
-int print_s(va_list s);
-int print_d(va_list d);
-int print_i(va_list i);
-int print_o(va_list o);
+int print_char(va_list arg);
+int print_str(va_list arg);
+int print_modulus(va_list arg);
+int print_int(va_list list);
+int print_binary(va_list list);
+int print_unsigned(va_list list);
+int print_octal(va_list list);
+int print_hex_lower(va_list list);
+int print_hex_upper(va_list list);
+
 #endif
 
