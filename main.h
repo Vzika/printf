@@ -22,12 +22,12 @@ void print_string(const char *s, int *char_count);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int base_change(unsigned int n, unsigned int base);
+int print_binary(va_list b);
 int printOctal(va_list args);
 int print_c(va_list c);
 int print_s(va_list s);
 int print_d(va_list d);
 int print_i(va_list i);
-int print_b(va_list b);
 int print_o(va_list o);
 #endif
 
