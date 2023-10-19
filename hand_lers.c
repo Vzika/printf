@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * handle_write_char - Prints a string.
- * @c: Char types.
- * @buffer: Buffer array for printing.
- * @flags: Calculates active flags.
- * @width: Width specification.
+ * handle_write_char - Print a character with formatting options.
+ * @c: Character to be printed
+ * @buffer: Character buffer for printing.
+ * @flags: Flags that control formatting.
+ * @width: Width specifier.
  * @preciision: Precision specifier.
  * @size: Size specifier.
- * Return: Number of characters printed.
+ * Return: The number of characters printed.
  */
 int handle_write_char(char c, char buffer[],
 	int flags, int width, int preciision, int size)
@@ -43,15 +43,15 @@ int handle_write_char(char c, char buffer[],
 }
 
 /**
- * write_number - Prints a string.
- * @is_negative: Indicates if the number is negative.
+ * write_number - Format and print a number as a string.
+ * @is_negative: Tells if the number is negative.
  * @ind: Character types.
- * @buffer: Buffer array for printing.
- * @flags: Calculates active flags.
+ * @buffer: Character buffer for printing.
+ * @flags: Extracts flag characters.
  * @width: Width specifier.
  * @preciision: Precision specifier.
  * @size: Size specifier.
- * Return: Number of characters printed.
+ * Return: The number of characters printed.
  */
 int write_number(int is_negative, int ind, char buffer[],
 	int flags, int width, int preciision, int size)
@@ -122,16 +122,16 @@ int write_num(int ind, char buffer[],
 }
 
 /**
-  * write_unsgnd - Writes an unsigned number
-  * @is_negative: Indicator for the negativity of the number
-  * @ind: Starting index of the number in the buffer
-  * @buffer: Array of characters
-  * @flags: Flag specifications
-  * @width: Width specification
-  * @preciision: Precision specification
-  * @size: Size specification
+  * write_unsgnd - Format and print an unsigned number
+  * @is_negative: Tells if the number is negative
+  * @ind: Starting index of the number in the character buffer
+  * @buffer: Array of characters for printing
+  * @flags: Flag specifier
+  * @width: Width specifier
+  * @preciision: Precision specifier
+  * @size: Size specifier
   *
-  * Return: Number of characters written
+  * Return: The number of characters written
   */
 int write_unsgnd(int is_negative, int ind,
 	char buffer[],
@@ -179,17 +179,17 @@ int write_unsgnd(int is_negative, int ind,
 }
 
 /**
- * write_pointer - Write a memory address
- * @buffer: Array of characters
- * @ind: Starting index of the number in the buffer
- * @len: Length of the number
+ * write_pointer - Format and print a memory address
+ * @buffer: Character buffer for storing the formatted address
+ * @ind: Starting index of the address in the buffer
+ * @len: Length of the formatted address
  * @width: Width specifier
  * @flags: Flags specifier
- * @pad: Character representing the padding
- * @extra_c: Character representing extra character
+ * @pad: Character used for padding
+ * @extra_c: Extra character
  * @pad_start: Index at which padding should start
  *
- * Return: Number of written characters
+ * Return: The number of written characters
  */
 int write_pointer(char buffer[], int ind, int len,
 	int width, int flags, char pad, char extra_c, int pad_start)
