@@ -51,14 +51,14 @@ int print_pointer(va_list types, char buffer[],
 }
 
 /**
- * print_non_printable - Prints ASCII codes in hexadecimal of non-printable characters.
- * @types: List of arguments.
- * @buffer: Buffer array for handling print.
- * @flags: Calculates active flags.
- * @width: Specifies the width for formatting.
- * @precision: Precision specification for formatting.
- * @size: Size specifier for formatting.
- * Return: Number of characters printed.
+ * print_non_printable - Print hexa ASCII codes of non-printable char..
+ * @types: Argument list.
+ * @buffer: Print buffer.
+ * @flags: Active flags.
+ * @width: Formatting width.
+ * @precision: Formatting precision.
+ * @size: Size specifier.
+ * Return: Number of printed characters.
  */
 int print_non_printable(va_list types, char buffer[],
 	int flags, int width, int precision, int size)

@@ -53,11 +53,10 @@ int _printf(const char *format, ...)
 }
 
 /**
- * to_print_buffer - Output the buffer's contents if it's available
- * @buffer: An array of characters
- * @buffer_index: The index indicating where the next character will be added, representing the buffer's length
+ * print_buffer - Print the buffer's contents if it's present
+ * @buffer: Character array
+ * @buffer_index: Index for the next character, indicating buffer length
  */
-
 void print_buffer(char buffer[], int *buffer_index)
 {
 	if (*buffer_index > 0)

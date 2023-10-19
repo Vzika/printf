@@ -61,7 +61,7 @@ int print_octal(va_list list, char buff[],
 
 	buff[BUFF_SIZE - 1] = '\0';
 
-	while(number > 0)
+	while (number > 0)
 	{
 		buff[i--] = (number % 8) + '0';
 		number /= 8;
